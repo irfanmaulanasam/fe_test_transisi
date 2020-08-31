@@ -1,5 +1,5 @@
 # fe_test_transisi
-amking som single page application for frond-end test transisi company
+making som single page application for frond-end test transisi company
 ## Project setup
 ```
 yarn install
