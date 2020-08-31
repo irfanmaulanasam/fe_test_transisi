@@ -1,6 +1,5 @@
 # fe_test_transisi
-<<<<<<< HEAD
-
+amking som single page application for frond-end test transisi company
 ## Project setup
 ```
 yarn install
