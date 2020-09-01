@@ -13,12 +13,15 @@
         <taskStatus :status="task.status" />
       </div>
     </div>
-    <button
-    class="rounded-full px-3 w-auto bg-orange-200 border"
+    <div
+    class="flex justify-end relative  px-3 w-full"
+    >
+    <button class="absolute rounded-full border "
       @click="addTask"
     >
-    click
+      +
     </button>
+    </div>
   </div>
 </template>
 
@@ -62,11 +65,11 @@ export default {
   },
   methods: {
     addTask() {
-      let data = this.order[this.getNumber()];
+      let data = this.order[this.getNumber(this.order.length-1)];
       this.order.push(data);
     },
-    getNumber(){
-      return Math.floor(Math.random()*this.order.length-1)
+    getNumber(number){
+      return Math.floor(Math.random()*number)
     }
   }
 };
