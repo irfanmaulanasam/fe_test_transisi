@@ -5,8 +5,8 @@
         id="profile" 
         class="flex flex-col lg:flex-row w-full  h-auto justify-between rounded-lg shadow-2xl bg-white mx-6 lg:mx-0 bg-gray-900"
       >  
-        <profile/>
-        <todo/>
+        <profile class="w-1/2"/>
+        <todo class="w-1/2"/>
       </div>	
     </div>	
   </div>

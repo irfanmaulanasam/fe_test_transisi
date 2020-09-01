@@ -4,7 +4,7 @@
     <img class="avatar z-20" src="http://placeimg.com/80/80/animals">
     <img class="avatar z-10" src="http://placeimg.com/80/80/tech">
     <img class="avatar z-0" src="http://placeimg.com/80/80/sport">
-    <div class="flex justify-center items-center w-6 h-6 border-2 border-gray-400 rounded-full p-2 text-sm text-gray-500">
+    <div class="flex justify-center items-center w-5 h-5 border-2 border-gray-400 rounded-full p-2 text-sm text-gray-500">
       +
     </div>
   </div>
@@ -18,8 +18,8 @@ export default {
 
 <style>
 .avatar {
-	width: 40px;
-  height: 40px;
+	width: 30px;
+  height: 30px;
   border-width: 3px;
   border-color: white;
   border-radius: 50%; 
