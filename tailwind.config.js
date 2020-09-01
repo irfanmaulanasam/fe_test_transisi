@@ -3,6 +3,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    objectFit: ['responsive', 'hover', 'focus'],
+  },
+  plugins: [
+  ],
 }
