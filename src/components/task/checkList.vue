@@ -1,21 +1,17 @@
 <template>
   <div
-    class="rounded-full h-6 w-6 flex items-center justify-center border-gray-400 border-2"
-    :class="{'bg-green-300':status}"
+    class="rounded-full h-6 w-6 flex items-center justify-center border-gray-600 border-2"
   >
-    <div v-if="status" class>
-      <svg
-        class="fill-current stroke-current text-white "
-        stroke-width="2"
-        viewBox="0 0 475 475"
+    <div v-if="status">
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="22" 
+        height="22" 
+        viewBox="0 0 24 24"
+        class="fill-current stroke-current text-green-700"
       >
-        <g transform="translate(0 -540.36)">
-          <path d="M367.8,696.86l-211.1,145.6l-47.7-68.4c-2.3-3.4-7-4.3-10.4-1.9c-3.4,2.3-4.3,7-1.9,10.4l52,74.5
-          c1.5,2.1,3.8,3.2,6.2,3.2v0c1.5,0,2.9-0.5,4.2-1.4l217.2-149.7c3.4-2.3,4.3-7,1.9-10.4C375.9,695.36,371.2,694.46,367.8,696.86z"
-          />
-        </g>
+        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.25 17.292l-4.5-4.364 1.857-1.858 2.643 2.506 5.643-5.784 1.857 1.857-7.5 7.643z"/>
       </svg>
-
     </div>
     <div v-else></div>
   </div>

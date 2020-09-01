@@ -67,9 +67,9 @@ export default new Vuex.Store({
     getListUser({ commit }) {
       Axios
         .get('https:/reqres.in/api/users?page=1')
-        .then(res => res.data)
-        .then(data => {
-          commit('setListUser', data)
+        .then(({data}) =>{
+          console.log(data)
+          commit('setListUser', data.data)
         })
         .catch(e => {
           console.log(e)

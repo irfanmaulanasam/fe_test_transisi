@@ -25,6 +25,7 @@
           type="password"
           v-model="password"
           placeholder="******************"
+          @keyup.enter="sendForm"
         />
         <p
           v-if="!password && notCompleted"
@@ -110,6 +111,9 @@ export default {
     saveEmail() {
       this.$store.state.userDetail.email = this.email;
       this.$store.state.userDetail.password = this.password;
+    },
+    sendForm(){
+      return this.error?this.sendRegister():this.sendLogin();
     },
     sendLogin() {
       if (this.checkForm()) {

@@ -1,23 +1,18 @@
 <template>
   <div id="avatar">
-    <div class="flex justify-center items-center m-2" v-if="listUser.length < 1">
-      <img class="avatar object-cover z-40" src="http://placeimg.com/80/80/people">
-      <img class="avatar object-cover z-20" src="http://placeimg.com/80/80/animals">
-      <img class="avatar object-cover z-10" src="http://placeimg.com/80/80/tech">
-      <img class="avatar object-cover z-0" src="http://placeimg.com/80/80/sport">
-      <div class="flex justify-center items-center w-5 h-5 border-2 border-gray-400 rounded-full p-2 text-sm text-gray-500">
-        +
+    <div class="flex w-full justify-between mt-2">
+      <div class="flex justify-center items-center" >
+          <img class="avatar z-40" :src="listUser[0].avatar">
+          <img class="avatar z-20" :src="listUser[1].avatar">
+          <img class="avatar z-10" :src="listUser[2].avatar">
+          <img class="avatar z-0" :src="listUser[3].avatar">
       </div>
-    </div>
-    <div class="flex flex-wrap justify-center items-center m-2" v-else>
-      <div class="border border-red-800">
-        <img class="avatar object-cover z-40" :src="listUser[0].avatar">
-        <img class="avatar object-cover z-20" :src="hlistUser[1].avatar">
-        <img class="avatar object-cover z-10" :src="listUser[2].avatar">
-        <img class="avatar object-cover z-0" :src="listUser[3].avatar">
-        <div class="flex justify-center items-center w-5 h-5 border-2 border-gray-400 rounded-full p-2 text-sm text-gray-500">
-        +
-      </div>
+      <div class="flex w-full justify-end ml-1 pl-1 mt-1">
+        <svg 
+          class="fill-current text-gray-500"
+          width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+        >
+          <path d="M11.5 0c6.347 0 11.5 5.153 11.5 11.5s-5.153 11.5-11.5 11.5-11.5-5.153-11.5-11.5 5.153-11.5 11.5-11.5zm0 1c5.795 0 10.5 4.705 10.5 10.5s-4.705 10.5-10.5 10.5-10.5-4.705-10.5-10.5 4.705-10.5 10.5-10.5zm.5 10h6v1h-6v6h-1v-6h-6v-1h6v-6h1v6z"/></svg>
       </div>
     </div>
   </div>
@@ -25,7 +20,7 @@
 
 <script>
 export default {
-  mounted(){
+  created(){
     this.$store.dispatch('getListUser')
   },
   computed:{
@@ -36,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .avatar {
 	width: 30px;
   height: 30px;
