@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import Axios from 'axios'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    token:null,
+    token: null,
     userDetail: {
-      email: 'cacaca@gmo.com',
+      email: '',
       password: '',
     },
-    listUser:[],
+    listUser: [],
     taskOrder: [
       {
         checklist: true,
@@ -38,7 +39,7 @@ export default new Vuex.Store({
         status: 0
       }
     ],
-    projectCollection:[
+    projectCollection: [
       'green house',
       'cyber punk',
       'easy crypto',
@@ -55,13 +56,32 @@ export default new Vuex.Store({
       'over load',
       'nothing',
     ],
-    selectedProject:'easy crypto'
+    selectedProject: 'easy crypto'
   },
   mutations: {
+    setListUser(state, data) {
+      state.listUser = data
+    }
   },
   actions: {
-    getListUser(){
-      
+    getListUser({ commit }) {
+      Axios
+        .get('https:/reqres.in/api/users?page=1')
+        .then(res => res.data)
+        .then(data => {
+          commit('setListUser', data)
+        })
+        .catch(e => {
+          console.log(e)
+        })
+    },
+    loginUser(context) {
+      context.commit("LOGIN_USER")
+    }
+  },
+  getters:{
+    getUserDetails: state => {
+      return state.userDetails.email
     }
   },
   modules: {

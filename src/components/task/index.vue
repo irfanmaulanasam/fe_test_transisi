@@ -30,33 +30,6 @@ export default {
   data() {
     return {
       count:0,
-      // order: [
-      //   {
-      //     checklist: true,
-      //     taskName: "Create initial layout for homepage",
-      //     status: 3
-      //   },
-      //   {
-      //     checklist: true,
-      //     taskName: "Fixing Icons with transparent background",
-      //     status: 1
-      //   },
-      //   {
-      //     checklist: false,
-      //     taskName: "Fixing Icons with transparent background",
-      //     status: 1
-      //   },
-      //   {
-      //     checklist: true,
-      //     taskName: "Discussions regardin workflow improvement",
-      //     status: 2
-      //   },
-      //   {
-      //     checklist: false,
-      //     taskName: "create quotation for app redesign project",
-      //     status: 0
-      //   }
-      // ]
     };
   },
   methods: {
