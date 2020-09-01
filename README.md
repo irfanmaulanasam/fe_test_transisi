@@ -1,6 +1,7 @@
+"email": "eve.holt@reqres.in",
+"password": "pistol"
 # fe_test_transisi
-<<<<<<< HEAD
-
+making som single page application for frond-end test transisi company
 ## Project setup
 ```
 yarn install
