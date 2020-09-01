@@ -1,13 +1,11 @@
 <template>
   <div class="bg-white rounded m-2 px-2">
     <div class="flex">
-      <div class="">
+      <div class="m-2">
         <h4 class="text-xl font-bold pt-8 lg:pt-0">Nama Team</h4>
         <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quasi nemo, </p>
       </div>
-      <div class="rounded">
-        component photo badge
-      </div>
+      <avatar/>
     </div>
     <div class="flex mt-5">
         <h4 class="text-xl font-bold items-start w-3/4">Today</h4>
@@ -24,9 +22,11 @@
 
 <script>
 import task from '@/components/task'
+import avatar from '@/components/task/avatar'
 export default {
   components:{
-    task
+    task,
+    avatar
   }
 }
 </script>

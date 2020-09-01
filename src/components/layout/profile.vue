@@ -2,10 +2,12 @@
  <div>
     <submenu class="w-6 h-6 mt-6 ml-6"/>	
     <div class="p-4 md:p-12 text-center lg:text-left text-white">		
-        <h1 class="text-3xl font-bold pt-8 lg:pt-0">HI Samanta</h1>
-        <p class="text-sm">Welcome Back to the workspace, we miss you!</p>
-        <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-teal-500 opacity-25"></div>
-        <searchProject/>
+        <h1 class="text-3xl font-bold pt-8 lg:pt-0">Hi Samanta</h1>
+        <p class="text-xs">Welcome Back to the workspace, we miss you!</p>
+        <!-- <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-gray-500 opacity-25"></div> -->
+        <div class="mt-6 mb-10">
+          <searchProject/>
+        </div>
         <div class="flex items-end space-around w-1/2 ">
           <div class="text-xl font-bold pt-8 lg:pt-0 mr-3 capitalize">
             project
