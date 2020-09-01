@@ -2,7 +2,7 @@
  <div>
     <submenu class="w-6 h-6 mt-6 ml-6"/>	
     <div class="p-4 md:p-12 text-center lg:text-left text-white">		
-        <h1 class="text-3xl font-bold pt-8 lg:pt-0">Hi Samanta</h1>
+        <h1 class="text-3xl font-bold pt-8 lg:pt-0 capitalize">Hi {{getUsername(email)}}</h1>
         <p class="text-xs text-gray-700">Welcome Back to the workspace, we miss you!</p>
         <div class="w-3/4 mt-6 mb-10">
           <searchProject/>
@@ -32,23 +32,23 @@ export default {
   },
   data(){
     return{
-      projectCollection:[
-        'green house',
-        'cyber punk',
-        'easy crypto',
-        'travel app',
-        'landing page',
-        'e commerce',
-        'blog writing',
-        'cullinary recipe',
-        'iot',
-        'over load',
-        'nothing',
-        'cullinary recipe',
-        'iot',
-        'over load',
-        'nothing',
-        ]
+    }
+  },
+  methods:{
+    getUsername(email){
+      if (email) {
+        return email.split('@')[0]
+      } else {
+        return 'stranger'
+      }
+    }
+  },
+  computed:{
+    email(){
+      return this.$store.state.userDetail.email
+    },
+    projectCollection(){
+      return this.$store.state.projectCollection
     }
   }
 }

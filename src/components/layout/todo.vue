@@ -2,7 +2,7 @@
   <div class="bg-white rounded m-2 px-2">
     <div class="flex">
       <div class="m-2">
-        <h4 class="text-xl font-bold pt-8 lg:pt-0">Nama Team</h4>
+        <h4 class="text-xl font-bold pt-8 lg:pt-0 capitalize">{{selectedProject}}</h4>
         <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quasi nemo, </p>
       </div>
       <avatar/>
@@ -27,6 +27,11 @@ export default {
   components:{
     task,
     avatar
+  },
+  computed:{
+    selectedProject() {
+      return this.$store.state.selectedProject;
+    },
   }
 }
 </script>

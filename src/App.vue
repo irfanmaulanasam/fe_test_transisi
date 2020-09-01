@@ -19,8 +19,12 @@ export default {
   components:{
     profile,
     todo
+  },
+  computed:{
+    token(){
+      return this.$store.state.token
+    }
   }
-
 }
 </script>
 <style>
