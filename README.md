@@ -1,3 +1,4 @@
+# email yang digunakan untuk login
 "email": "eve.holt@reqres.in",
 "password": "pistol"
 # fe_test_transisi
